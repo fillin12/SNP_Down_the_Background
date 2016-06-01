@@ -141,7 +141,7 @@ for file_name, final_snp_list in final_dict.items():
 
     for snps in final_snp_list:
 
-        print ( snps[0], snps[1], snps[2] file = new_file )
+        print ( snps[0], snps[1], snps[2], file = new_file )
 
 
 new_file.close()
