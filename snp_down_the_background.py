@@ -69,7 +69,7 @@ for lines in reference_file:
 
     num += 1
     split = lines.split()
-    important_info = split[1], (split[3] + split[4])
+    important_info = split[1], split[3], split[4]
     reference_SNPs.append( important_info )
 
 SNP_Dict = {}
@@ -95,7 +95,7 @@ for file_names in file_list:
             continue
 
         split_line = lines.split()
-        important_info = split_line[1], (split_line[3] + split_line[4]), True
+        important_info = split_line[1], split_line[3], split_line[4], True
         SNP_list.append( list( important_info ) )
 
     SNP_Dict[ file_names ] = SNP_list
@@ -115,7 +115,7 @@ for mutant, SNP_list in SNP_Dict.items():
         
             if (SNPs[0] == wt_snps[0]):
 
-                SNPs[2] = False
+                SNPs[3] = False
 
     #print( "Mutant: ", mutant, num )
     num = 0
@@ -128,7 +128,7 @@ for mutants, SNP_list in SNP_Dict.items():
     
     for SNPs in SNP_list:
 
-        if SNPs[2]:
+        if SNPs[3]:
 
             final_dict[ mutants ].append( SNPs )
 
@@ -141,7 +141,7 @@ for file_name, final_snp_list in final_dict.items():
 
     for snps in final_snp_list:
 
-        print ( snps[0], snps[1], file = new_file )
+        print ( snps[0], snps[1], snps[2] file = new_file )
 
 
 new_file.close()
