@@ -135,7 +135,7 @@ for mutants, SNP_list in SNP_Dict.items():
             
 new_file = open( output_file_name , "w" ) # Begin writing ouutput file    
 
-print( "Location    Original    Mutant", file = new_file )
+print( "Source file: <name_of_file> \nLocation    Original    Mutant", file = new_file )
 
 for file_name, final_snp_list in final_dict.items():
 
