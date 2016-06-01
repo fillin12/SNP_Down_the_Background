@@ -5,6 +5,8 @@
 ## Fixes: 
 ## 1) When not given an output name, the program faults.
 ## 2) Generate a .vcf instead of a .txt file so it can be manipulated further 
+## 3) While still making a .txt, add formatting to the output to make it easier to read
+
 
 import os
 import sys
