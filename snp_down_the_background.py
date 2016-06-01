@@ -1,6 +1,11 @@
 ######################
 ## .vcf SNP Sorter v1.2
 
+######################
+## Fixes: 
+## 1) When not given an output name, the program faults.
+## 2) Generate a .vcf instead of a .txt file so it can be manipulated further 
+
 import os
 import sys
 
